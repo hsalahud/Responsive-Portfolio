@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <meta charset="UTF-8">
+
+    <title>About Me</title>
+</head>
+
+<body>
+    <header>
+            <h1 id="name"> Hamza Salahuddin</h1>
+            <h1 id="initial"> HS</h1>
+            <ul class="pages">
+                <li id="about"><a href="./index.html">About</a></li>
+                <li id="portfolio"><a href="./portfolio.html">Portfolio</a></li>
+                <li id="contact"><a href="./contact.html">Contact</a></li>
+            </ul>
+    
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="./index.html">About</a>
+                    <a href="./portfolio.html">Portfolio</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+
+    </header>
+
+<!-- contact text input fields -->
+    <div class="containerContact">
+        <div id="contactBody">
+            <h1 id="subHeaderContact">Contact</h1>
+            <p class="cInfo">Name</p>
+            <input type="text" name="FirstName">
+            <p class="cInfo">Email</p>
+            <input type="text" name="Email">
+            <p class="cInfo">Message</p>
+            <textarea></textarea>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+
+    <footer class="aboutFooter">
+        <p id="footerText">Copyright © </p>
+    </footer>
+
+
+
+    <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+</body>
+
+</html>

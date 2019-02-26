@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <meta charset="UTF-8">
+
+    <title>About Me</title>
+</head>
+
+<body>
+    <!-- Setting up my top nav -->
+    <header>
+        <h1 id="name"> Hamza Salahuddin</h1>
+        <h1 id="initial"> HS</h1>
+        <ul class="pages">
+            <li id="about"><a href="#">About</a></li>
+            <li id="portfolio"><a href="./portfolio.html">Portfolio</a></li>
+            <li id="contact"><a href="./contact.html">Contact</a></li>
+        </ul>
+<!-- dropdown which appears for mobiles -->
+        <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">About</a>
+                    <a href="./portfolio.html">Portfolio</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
+    </header>
+
+<!-- Content in about page -->
+    <div class="container">
+        <div id="aboutMe">
+            <h1 id="subHeader">About Me</h1>
+            <img src="./assets/images/Tweek_pic.png" alt="Hamza" id="bio-image">
+            <p id="history1">
+                Hi Everyone! My name is Hamza and I am from Toronto, Canada. I moved to California in 2014 to pursue my
+                acting career. Just kidding! I came here to do my
+                Master in Public Policy here at UC Irvine.
+            </p>
+
+            <p id="history2">
+                I studied developing and assessing policies, all of which have many
+                social impacts. There are many applications of policy making. Some that I have studied range from Environmental impacts
+                of development projects (think traffic, removing native plants and animals), labor impacts, and
+                education impacts. I got introduced to a form of programming during this period.
+            </p>
+
+            <p id="history3">
+                I was studying Statistics where I would use data to assess the impacts of educational programs like
+                free lunch programs. That led me to get a job with
+                an education e-learning company. My goal is to learn more about programming so I can keep my options
+                open and so that in the future I can find a way of collaborating
+                my skills and knowledge to have a positive impact on educational experiences.
+            </p>
+
+            <p id="history4">Besides all that, I enjoy dancing (Salsa and Bachata), paddleboarding, kayaking, bouldering, and skiing.</p>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="aboutFooter">
+        <p id="footerText">Copyright © </p>
+    </footer>
+
+    <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+</body>
+
+</html>
